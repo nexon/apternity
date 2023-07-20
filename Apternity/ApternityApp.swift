@@ -1,6 +1,6 @@
 //
-//  apternityApp.swift
-//  apternity
+//  ApternityApp.swift
+//  Apternity
 //
 //  Created by Alberto Lagos on 16-07-23.
 //
@@ -8,13 +8,14 @@
 import SwiftUI
 
 @main
-struct apternityApp: App {
-    let persistenceController = PersistenceController.shared
+struct ApternityApp: App {
+    let persistenceController = PersistenceController()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ATYMainScreenView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
         }
     }
 }
